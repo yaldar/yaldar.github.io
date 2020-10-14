@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/yaldar.github.io/static/css/main.26e13a99.chunk.css",
-    "main.js": "/yaldar.github.io/static/js/main.5a91b5cf.chunk.js",
-    "main.js.map": "/yaldar.github.io/static/js/main.5a91b5cf.chunk.js.map",
-    "runtime-main.js": "/yaldar.github.io/static/js/runtime-main.0a95d86f.js",
-    "runtime-main.js.map": "/yaldar.github.io/static/js/runtime-main.0a95d86f.js.map",
-    "static/js/2.6da1e238.chunk.js": "/yaldar.github.io/static/js/2.6da1e238.chunk.js",
-    "static/js/2.6da1e238.chunk.js.map": "/yaldar.github.io/static/js/2.6da1e238.chunk.js.map",
-    "index.html": "/yaldar.github.io/index.html",
-    "precache-manifest.482eb5516ad91db5f7be1756ddae2cda.js": "/yaldar.github.io/precache-manifest.482eb5516ad91db5f7be1756ddae2cda.js",
-    "service-worker.js": "/yaldar.github.io/service-worker.js",
-    "static/css/main.26e13a99.chunk.css.map": "/yaldar.github.io/static/css/main.26e13a99.chunk.css.map",
-    "static/js/2.6da1e238.chunk.js.LICENSE.txt": "/yaldar.github.io/static/js/2.6da1e238.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/yaldar.github.io/static/media/logo.5d5d9eef.svg"
+    "main.css": "/static/css/main.5f361e03.chunk.css",
+    "main.js": "/static/js/main.62546e94.chunk.js",
+    "main.js.map": "/static/js/main.62546e94.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.19ccc7f6.js.map",
+    "static/js/2.9e7789ca.chunk.js": "/static/js/2.9e7789ca.chunk.js",
+    "static/js/2.9e7789ca.chunk.js.map": "/static/js/2.9e7789ca.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.b1c1e3e967c496739de8e2504bf583a7.js": "/precache-manifest.b1c1e3e967c496739de8e2504bf583a7.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.9e7789ca.chunk.js.LICENSE.txt": "/static/js/2.9e7789ca.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.0a95d86f.js",
-    "static/js/2.6da1e238.chunk.js",
-    "static/css/main.26e13a99.chunk.css",
-    "static/js/main.5a91b5cf.chunk.js"
+    "static/js/runtime-main.19ccc7f6.js",
+    "static/js/2.9e7789ca.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.62546e94.chunk.js"
   ]
 }
