@@ -1,20 +1,21 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import scrollHandler from '../../utils';
 import './Navbar.css';
-import {
-  Route,
-  NavLink,
-  BrowserRouter as Router,
-  Switch,
-} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
+  const [expanded, setExpanded] = useState(false);
   useEffect(() => {
     window.addEventListener('scroll', scrollHandler);
     return () => window.removeEventListener('scroll', scrollHandler);
   }, []);
+
   return (
-    <nav className="navbar" id="navbar">
+    <nav
+      className={`navbar`}
+      id="navbar"
+      onClick={() => setExpanded(!expanded)}
+    >
       <NavLink to="/about">about</NavLink>
       <NavLink to="https://github.com/yaldar/" target="blank">
         github
