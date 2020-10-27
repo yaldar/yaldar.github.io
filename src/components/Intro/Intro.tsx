@@ -6,7 +6,7 @@ const Intro = () => {
   return (
     <div className="intro-wrapper">
       <img src={profile} alt="me" className="image" />
-      <p className="talk">
+      <p className="intro">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
         provident et atque tempora natus distinctio iure cumque quia illo.
         Exercitationem aspernatur nemo dolorem aperiam deleniti. Culpa
