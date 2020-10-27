@@ -1,6 +1,12 @@
 import React, { useEffect } from 'react';
 import scrollHandler from '../../utils';
 import './Navbar.css';
+import {
+  Route,
+  NavLink,
+  BrowserRouter as Router,
+  Switch,
+} from 'react-router-dom';
 
 const Navbar = () => {
   useEffect(() => {
@@ -9,10 +15,12 @@ const Navbar = () => {
   }, []);
   return (
     <nav className="navbar" id="navbar">
-      <a href="">about</a>
-      <a href="">github</a>
-      <a href="">projects</a>
-      <a href="">contact</a>
+      <NavLink to="/about">about</NavLink>
+      <NavLink to="https://github.com/yaldar/" target="blank">
+        github
+      </NavLink>
+      <NavLink to="/projects">projects</NavLink>
+      <NavLink to="/contact">contact</NavLink>
     </nav>
   );
 };
