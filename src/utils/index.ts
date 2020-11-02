@@ -11,4 +11,10 @@ const scrollHandler = () => {
   prevScrollpos = currentScrollPos;
 };
 
-export default scrollHandler;
+const fetchProjects = () => {
+  fetch('/https://api.github.com/graphql')
+
+    .then(data => console.log('data returned:', data));
+};
+
+export { scrollHandler, fetchProjects };
