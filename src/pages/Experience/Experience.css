@@ -1,0 +1,7 @@
+.exp-wrapper {
+  margin-bottom: 40px;
+}
+
+.exp-wrapper > li {
+  padding: 30px;
+}

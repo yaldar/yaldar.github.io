@@ -7,22 +7,20 @@ import Intro from './pages/Intro/Intro';
 import Skills from './pages/Skills/Skills';
 import Projects from './pages/Projects/Projects';
 import skills from './data/skillsObject';
-import { fetchProjects } from './utils';
+import Experience from './pages/Experience/Experience';
 
-function App() {
-  fetchProjects();
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <Header />
-        <Intro />
-        <About />
-        <Skills {...skills} />
-        <Projects />
-        <Footer />
-      </div>
-    </BrowserRouter>
-  );
-}
+const App = () => (
+  <BrowserRouter>
+    <div className="App">
+      <Header />
+      <Intro />
+      <About />
+      <Experience />
+      <Skills {...skills} />
+      <Projects />
+      <Footer />
+    </div>
+  </BrowserRouter>
+);
 
 export default App;

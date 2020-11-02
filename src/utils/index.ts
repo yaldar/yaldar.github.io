@@ -1,3 +1,5 @@
+import { resType } from '../types/index';
+
 let prevScrollpos = window.pageYOffset;
 const scrollHandler = () => {
   const currentScrollPos = window.pageYOffset;
@@ -11,10 +13,13 @@ const scrollHandler = () => {
   prevScrollpos = currentScrollPos;
 };
 
-const fetchProjects = () => {
-  fetch('/https://api.github.com/graphql')
-
-    .then(data => console.log('data returned:', data));
-};
+const fetchProjects = async () =>
+  await fetch('https://api.github.com/users/yaldar/repos')
+    .then((res) => res.json())
+    .then((w) => {
+      console.log(w);
+      return w;
+    })
+    .then((arr: resType[]) => arr.filter((project: any) => !project.fork));
 
 export { scrollHandler, fetchProjects };

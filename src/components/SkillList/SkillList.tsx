@@ -1,15 +1,13 @@
 import React from 'react';
+import { SkillListType } from '../../types';
 import './SkillList.css';
 
-type SkillListType = {
-  title: string;
-  list: string[];
-};
 const SkillList = ({ title, list }: SkillListType) => {
   return (
     <ul className={`${title} skill-list`}>
-      {list.map((el) => (
-        <li>{el}</li>
+      <h2>{title}</h2>
+      {list.map((el, i) => (
+        <li key={i}>{el}</li>
       ))}
     </ul>
   );

@@ -16,7 +16,7 @@ const Navbar = () => {
       <NavLink to="/projects">projects</NavLink>
       <NavLink to="/skills">skills</NavLink>
       <a href="https://github.com/yaldar/" target="blank">
-        github ->
+        github -
       </a>
       <NavLink to="/contact">contact</NavLink>
     </nav>

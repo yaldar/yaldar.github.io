@@ -1,14 +1,14 @@
 import React from 'react';
 import SkillList from '../../components/SkillList/SkillList';
 import './Skills.css'
-type skillsType = {
+type skillsObject = {
   languages: string[];
   backend: string[];
   frontend: string[];
   tools: string[];
 };
 
-const Skills = ({ languages, backend, frontend, tools }: skillsType) => {
+const Skills = ({ languages, backend, frontend, tools }: skillsObject) => {
   return (
     <div className="skills-wrapper">
       <SkillList title="languages" list={languages}/>
