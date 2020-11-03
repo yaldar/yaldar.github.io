@@ -3,7 +3,6 @@ import './Experience.css';
 import pastExp from '../../data/pastExp';
 
 const Experience = () => {
-  console.log(pastExp);
   return (
     <ul className="exp-wrapper" id="experience">
       <h4>Past experience:</h4>

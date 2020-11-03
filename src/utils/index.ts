@@ -17,10 +17,6 @@ const scrollHandler = () => {
 const fetchProjects = async () =>
   await fetch('https://api.github.com/users/yaldar/repos')
     .then((res) => res.json())
-    .then((w) => {
-      console.log(w);
-      return w;
-    })
     .then((arr: resType[]) => arr.filter((project: any) => !project.fork));
 
 export { scrollHandler, fetchProjects };
