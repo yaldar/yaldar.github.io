@@ -1,0 +1,22 @@
+.intro {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  text-align: center;
+}
+
+.profile-pic {
+  object-fit: contain;
+  max-height: 40vh;
+  margin-bottom: 40px;
+  border-radius: 50%;
+  transition: filter 0.5s ease-in-out;
+  -webkit-filter: grayscale(90%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(90%); /* FF 35+ */
+}
+
+.profile-pic:hover {
+  -webkit-filter: grayscale(30%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(30%); /* FF 35+ */
+}

@@ -1,24 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import {scrollHandler} from '../../utils';
+import React, { useEffect, useRef, useState } from 'react';
+import NavbarLink from '../NavbarLink/NavbarLink';
+import { scrollHandler } from '../../utils';
 import './Navbar.css';
-import { NavLink } from 'react-router-dom';
+import { Icon } from 'semantic-ui-react';
 
 const Navbar = () => {
-  const [expanded, setExpanded] = useState(false);
-  useEffect(() => {
-    window.addEventListener('scroll', scrollHandler);
-    return () => window.removeEventListener('scroll', scrollHandler);
-  }, []);
+  const [collapsed, setCollapsed] = useState(false);
+  const toggleCollapsed = () => setCollapsed((prev) => !prev);
 
   return (
-    <nav className="navbar" id="navbar" onClick={() => setExpanded(!expanded)}>
-      <NavLink to="/about">about</NavLink>
-      <NavLink to="/projects">projects</NavLink>
-      <NavLink to="/skills">skills</NavLink>
-      <a href="https://github.com/yaldar/" target="blank">
-        github -
-      </a>
-      <NavLink to="/contact">contact</NavLink>
+    <nav className={`navbar ${collapsed ? 'collapsed' : ''}`} id="navbar">
+      <Icon
+        name="bars"
+        className="icon"
+        onClick={toggleCollapsed}
+        size="big"
+      />
+      <NavbarLink to="About" />
+      <NavbarLink to="Experience" />
+      <NavbarLink to="Skills" />
+      <NavbarLink to="Projects" />
     </nav>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { fetchProjects } from '../../utils';
 import { resType } from '../../types/index';
+import { Card, Icon, Image } from 'semantic-ui-react';
 import './Projects.css';
 
 const Projects = () => {
@@ -11,16 +12,21 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="projects-wrapper">
+    <div className="projects-wrapper" id="projects">
       <h2>My projects:</h2>
-      <ul className="projects-list">
+      <div className="projects-list">
         {projects.map((project) => (
-          <li key={project.id}>
-            <h5>{project.name}</h5>
-            <p>{project.description}</p>
-          </li>
+          <Card href={project.html_url} target='blank'>
+            <Card.Content>
+              <Card.Header>{project.name}</Card.Header>
+              <Card.Meta>
+                <span className="date">created at {project.created_at}</span>
+              </Card.Meta>
+              <Card.Description>{project.description}</Card.Description>
+            </Card.Content>
+          </Card>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

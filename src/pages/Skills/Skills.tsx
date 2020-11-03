@@ -10,7 +10,7 @@ type skillsObject = {
 
 const Skills = ({ languages, backend, frontend, tools }: skillsObject) => {
   return (
-    <div className="skills-wrapper">
+    <div className="skills-wrapper" id="skills">
       <SkillList title="languages" list={languages}/>
       <SkillList title="backend" list={backend} />
       <SkillList title="frontend" list={frontend} />

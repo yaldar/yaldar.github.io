@@ -3,12 +3,13 @@ import { resType } from '../types/index';
 let prevScrollpos = window.pageYOffset;
 const scrollHandler = () => {
   const currentScrollPos = window.pageYOffset;
-  let hight = document.getElementById('navbar')!.clientHeight;
+  const navbar = document.getElementById('navbar');
+  let height = document.getElementById('navbar')!.clientHeight;
 
   if (prevScrollpos >= currentScrollPos) {
-    document.getElementById('navbar')!.style.top = '0';
+    navbar!.style.top = '0';
   } else {
-    document.getElementById('navbar')!.style.top = `-${hight}px`;
+    navbar!.style.top = `-${height}px`;
   }
   prevScrollpos = currentScrollPos;
 };

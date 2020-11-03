@@ -1,3 +1,15 @@
-.about{
+.about {
   margin-bottom: 40px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  text-align: center;
+}
+
+.about-links {
+  margin-top: 20px;
+
+}
+.about-links a {
+  color: inherit;
+  transition: all 0.5s ease-in-out;
 }
