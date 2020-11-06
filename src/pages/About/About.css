@@ -6,17 +6,22 @@
   align-items: center;
 }
 
+.line {
+  color: #ddd;
+  width: 80vw;
+  max-width: 500px;
+}
 .about-links {
   margin-top: 20px;
-
 }
 .about-links a {
   color: inherit;
   transition: all 0.5s ease-in-out;
 }
 
-.about-text{
+.about-text {
   width: 60vw;
   max-width: 800px;
   min-width: 200px;
+  margin-bottom: 30px;
 }

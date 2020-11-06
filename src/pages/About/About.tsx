@@ -20,7 +20,7 @@ const About = () => (
       more with software as it is my true passion.
     </p>
 
-    <hr />
+    <hr className="line" />
     <div className="about-links">
       <a href="https://github.com/yaldar" target="blank">
         <Icon name="github" size="huge" />
