@@ -51,11 +51,11 @@
     margin-bottom: 20px;
     display: block;
   }
-  .navbar.collapsed .icon {
+  .navbar.expanded .icon {
     left: 0;
     top: 0;
   }
-  .navbar.collapsed a {
+  .navbar.expanded a {
     float: none;
     display: block;
     text-align: left;
