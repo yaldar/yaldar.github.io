@@ -8,7 +8,7 @@ const Experience = () => (
     <h3>My past experience and education:</h3>
     <div className="exp-list">
       {pastExp.map((el, i) => (
-        <Card fluid>
+        <Card fluid key={i}>
           <Card.Content>
             <Card.Header>{el.title}</Card.Header>
             <Card.Meta>
@@ -16,7 +16,6 @@ const Experience = () => (
             </Card.Meta>
             <Card.Description>{el.desc}</Card.Description>
           </Card.Content>
-
         </Card>
       ))}
     </div>
