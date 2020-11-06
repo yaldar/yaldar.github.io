@@ -1,7 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 // @ts-nocheck
 import React from 'react';
-import { Icon } from 'semantic-ui-react';
 import { SkillListType } from '../../types';
 import './SkillList.css';
 

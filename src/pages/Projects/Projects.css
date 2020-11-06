@@ -1,7 +1,16 @@
 .projects-wrapper {
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.projects-list > li {
-  padding-bottom: 30px;
+.projects-list {
+  width: 60vw;
+  min-width: 200px;
+  max-width: 700px;
+  max-width: 700px;
+}
+
+.card {
 }

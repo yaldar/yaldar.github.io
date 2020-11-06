@@ -17,6 +17,9 @@ const Projects = () => {
       <div className="projects-list">
         {projects.map((project) => (
           <Card
+            fluid
+            color="yellow"
+            className="card"
             href={project.html_url}
             target="blank"
             header={project.name}

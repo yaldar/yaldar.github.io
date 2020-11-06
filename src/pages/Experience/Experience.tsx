@@ -1,20 +1,39 @@
 import React from 'react';
 import './Experience.css';
+import { Card } from 'semantic-ui-react';
 import pastExp from '../../data/pastExp';
 
-const Experience = () => {
-  return (
-    <ul className="exp-wrapper" id="experience">
-      <h4>Past experience:</h4>
+const Experience = () => (
+  <div className="exp-wrapper" id="experience">
+    <h3>My past experience and education:</h3>
+    <div className="exp-list">
       {pastExp.map((el, i) => (
-        <li key={i}>
-          <h5>{el.title}</h5>
-          <p>{el.timeRange}</p>
-          <p>{el.desc}</p>
-        </li>
+        <Card fluid>
+          {/* <Image
+            src={el.image}
+            wrapped
+
+          /> */}
+          <Card.Content>
+            <Card.Header>{el.title}</Card.Header>
+            <Card.Meta>
+              <span className="date">{el.timeRange}</span>
+            </Card.Meta>
+            <Card.Description>{el.desc}</Card.Description>
+          </Card.Content>
+
+        </Card>
       ))}
-    </ul>
-  );
-};
+    </div>
+  </div>
+);
 
 export default Experience;
+
+/*
+
+  <a>
+    <Icon name='user' />
+    22 Friends
+  </a>
+*/

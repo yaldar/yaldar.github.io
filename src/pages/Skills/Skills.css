@@ -1,6 +1,12 @@
 .skills-wrapper{
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
+  display: grid;
+  width: 90vw;
+  max-width: 900px;
+  /* padding: 20px; */
+  grid-template-columns: 1fr 1fr;
 }
 
+.centered-wrapper{
+  display: flex;
+  justify-content: center;
+}

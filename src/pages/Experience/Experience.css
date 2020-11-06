@@ -1,7 +1,13 @@
 .exp-wrapper {
-  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.exp-wrapper > li {
-  padding: 30px;
+.exp-list {
+  margin-bottom: 40px;
+  margin-top: 40px;
+  width: 80vw;
+  max-width: 900px;
+  min-width: 200px;
 }
