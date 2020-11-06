@@ -6,7 +6,6 @@ export type resType = {
   homepage: string | null;
   created_at: string;
   description: string;
-  t: string
 };
 
 export type SkillListType = {

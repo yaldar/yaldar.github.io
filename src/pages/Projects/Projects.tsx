@@ -15,9 +15,8 @@ const Projects = () => {
     <div className="projects-wrapper" id="projects">
       <h2>My projects:</h2>
       <div className="projects-list">
-        {projects.map((project, i) => (
+        {projects.map((project) => (
           <Card
-            key={i}
             fluid
             color="yellow"
             className="card"
