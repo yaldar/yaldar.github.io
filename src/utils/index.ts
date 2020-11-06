@@ -14,10 +14,22 @@ const scrollHandler = () => {
   prevScrollpos = currentScrollPos;
 };
 
-const fetchProjects = () => fetch('https://api.github.com/users/yaldar/repos')
-  .then((res) => res.json())
-  .then((arr: resType[]) => arr.filter((project: any) => !project.fork))
-  .then((unsorted) => unsorted.sort((a, b) => (a.created_at < b.created_at ? 1 : -1)));
+const fetchProjects = () =>
+  fetch('https://api.github.com/users/yaldar/repos')
+    .then((res) => res.json())
+    .then((arr: resType[]) => arr.filter((project: any) => !project.fork))
+    .then((unsorted) => unsorted.sort((a, b) => (a.created_at < b.created_at ? 1 : -1)))
+    // TODO add functionality to get the README
+    // .then((sorted) =>
+    //   sorted.map(async (repo) => {
+    //     const t = fetch(`GET /repos/:owner/${repo.name}/readme`);
+    //     return {...repo, t}
+    //   }),
+    // )
+    // .then(d=>{
+    //   console.log(d);
+    //   return d;
+    // });
 
 const getMonthName = (monthNum: string) => {
   const monthArray = [
