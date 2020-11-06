@@ -1,6 +1,5 @@
 /* Add a black background color to the top navigation */
 .navbar {
-  color: #333;
   background-color: antiquewhite;
   position: fixed;
   top: 0;
@@ -11,7 +10,7 @@
 }
 
 .navbar > .active {
-  background-color: #ddd;
+  background-color: rgba(255, 155, 155, 0.466);
 }
 
 /* Style the links inside the navigation bar */
@@ -22,11 +21,12 @@
   padding: 10px 16px;
   text-decoration: none;
   font-size: 17px;
+  color: black;
 }
 
 /* Change the color of links on hover */
 .navbar a:hover {
-  background-color: #ddd;
+  background-color: rgba(248, 195, 195, 0.664);
   color: black;
 }
 
