@@ -9,11 +9,6 @@ const Experience = () => (
     <div className="exp-list">
       {pastExp.map((el, i) => (
         <Card fluid>
-          {/* <Image
-            src={el.image}
-            wrapped
-
-          /> */}
           <Card.Content>
             <Card.Header>{el.title}</Card.Header>
             <Card.Meta>

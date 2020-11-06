@@ -1,4 +1,5 @@
 import React from 'react';
+
 import SkillList from '../../components/SkillList/SkillList';
 import './Skills.css';
 
@@ -13,13 +14,14 @@ const Skills = ({
   languages, backend, frontend, tools,
 }: skillsObject) => (
   <div className="centered-wrapper">
+    <h2>Skills and Technologies: </h2>
     <div className="skills-wrapper" id="skills">
-      <SkillList title="languages" list={languages} />
-      <SkillList title="backend" list={backend} />
-      <SkillList title="frontend" list={frontend} />
-      <SkillList title="tools" list={tools} />
-
+      <SkillList title="Languages" list={languages} />
+      <SkillList title="Backend" list={backend} />
+      <SkillList title="Frontend" list={frontend} />
+      <SkillList title="Tools" list={tools} />
     </div>
+
   </div>
 );
 
