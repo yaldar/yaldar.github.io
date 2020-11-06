@@ -12,7 +12,7 @@ const Navbar = () => {
   };
   const collapseOnClick = (e: MouseEvent) => {
     const target = e.target as HTMLElement;
-    if (target.id && target.id !== 'icon') toggleExpanded();
+    if (target.id && target.id !== 'icon') setExpanded(false);
   };
 
   useEffect(() => {
