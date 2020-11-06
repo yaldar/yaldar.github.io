@@ -30,10 +30,11 @@ const getMonthName = (monthNum: string) => {
     'July',
     'August',
     'September',
+    'October',
     'November',
     'December',
   ];
-  return monthArray[parseInt(monthNum, 10)];
+  return monthArray[parseInt(monthNum, 10) - 1];
 };
 
 const formateDate = (gitHubDate: string) => {
