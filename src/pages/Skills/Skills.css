@@ -1,8 +1,8 @@
 .skills-wrapper{
   display: grid;
-  width: 90vw;
+  margin-left: 20px;
+  margin-right: 20px;
   max-width: 900px;
-  /* padding: 20px; */
   grid-template-columns: 1fr 1fr;
 }
 
