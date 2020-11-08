@@ -14,7 +14,7 @@ const Intro = () => {
   return (
     <animated.div style={props}>
       <div className="intro">
-        <h1>Hi! My name is Yaldar</h1>
+        <h1>Yaldar Hapak, fullstack developer</h1>
 
         <img src={profile} alt="me" className="profile-pic" />
       </div>
