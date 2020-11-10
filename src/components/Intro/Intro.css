@@ -11,11 +11,11 @@
   margin-bottom: 40px;
   border-radius: 50%;
   transition: filter 0.5s ease-in-out;
-  -webkit-filter: grayscale(90%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
-  filter: grayscale(90%); /* FF 35+ */
+  filter: grayscale(60%);
+  -webkit-filter: grayscale(60%);
 }
 
 .profile-pic:hover {
-  -webkit-filter: grayscale(30%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
-  filter: grayscale(30%); /* FF 35+ */
+  -webkit-filter: grayscale(30%);
+  filter: grayscale(30%);
 }

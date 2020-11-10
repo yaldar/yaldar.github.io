@@ -25,7 +25,8 @@
   },
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
-    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": [1],
+    "no-use-before-define": "error",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".jsx"] }],
 
     "import/extensions": [

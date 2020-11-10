@@ -1,4 +1,4 @@
-import { resType } from '../types/index';
+import { ProjectObject } from '../types/index';
 
 let prevScrollpos = window.pageYOffset;
 const scrollHandler = () => {
@@ -14,11 +14,19 @@ const scrollHandler = () => {
   prevScrollpos = currentScrollPos;
 };
 
-const fetchProjects = () => fetch('https://api.github.com/users/yaldar/repos')
-  .then((res) => res.json())
-  .then((arr: resType[]) => arr.filter((project: any) => !project.fork))
-  .then((unsorted) => unsorted.sort((a, b) => (a.created_at < b.created_at ? 1 : -1)));
+// TODO refactor to use OAuth
+// const fetchProjects = async () => {
+//   const res = await fetch('https://api.github.com/users/yaldar/repos').then((res) => res.json());
+//   const ar = res.filter((project: any) => !project.fork);
 
+//   const sorted = ar.sort((a: any, b: any) => (a.created_at < b.created_at ? 1 : -1));
+//   const aarr=  sorted.map((el: any) => {
+//     const { html_url, name, created_at, description, id, fork, homepage } = el;
+//     return { html_url, name, created_at, description, id, fork, homepage };
+//   });
+//   console.log(aarr);
+// return aarr
+// };
 const getMonthName = (monthNum: string) => {
   const monthArray = [
     'January',
@@ -45,4 +53,4 @@ const formateDate = (gitHubDate: string) => {
   return `${monthName} ${year}`;
 };
 
-export { scrollHandler, fetchProjects, formateDate };
+export { scrollHandler, formateDate };

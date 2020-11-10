@@ -5,7 +5,6 @@ import About from './pages/About/About';
 import Footer from './pages/Footer/Footer';
 import Skills from './pages/Skills/Skills';
 import Projects from './pages/Projects/Projects';
-import skills from './data/skillsObject';
 import Experience from './pages/Experience/Experience';
 import 'semantic-ui-css/semantic.min.css';
 
@@ -15,7 +14,7 @@ const App = () => (
       <Header />
       <About />
       <Experience />
-      <Skills {...skills} />
+      <Skills />
       <Projects />
       <Footer />
     </div>

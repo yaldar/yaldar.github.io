@@ -7,7 +7,9 @@ import profile from '../../assets/profile.jpg';
 const Intro = () => {
   const props = useSpring({
     margin: '0',
-    from: { margin: '300px' },
+    from: {
+      margin: '300px',
+    },
     config: { duration: 550 },
   });
 

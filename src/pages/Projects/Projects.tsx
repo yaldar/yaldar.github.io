@@ -1,35 +1,35 @@
 import React, { useEffect, useState } from 'react';
-import { Card } from 'semantic-ui-react';
-import { fetchProjects, formateDate } from '../../utils';
-import { resType } from '../../types/index';
+import { Card, Image } from 'semantic-ui-react';
+import { formateDate } from '../../utils';
+import projectsArray from '../../data/projectsArray';
+import { ProjectObject } from '../../types/index';
 import './Projects.css';
-
 const Projects = () => {
-  const [projects, setProjects] = useState<resType[]>([]);
-
-  useEffect(() => {
-    fetchProjects().then(setProjects);
-  }, []);
-
   return (
     <div className="projects-wrapper" id="projects">
       <h2>My projects:</h2>
+
       <div className="projects-list">
-        {projects.map((project) => (
-          <Card
-            fluid
-            color="yellow"
-            className="card"
-            href={project.html_url}
-            target="blank"
-            header={project.name}
-            meta={formateDate(project.created_at)}
-            description={project.description}
-          />
+        {projectsArray.map((project) => (
+          <Card color="yellow" fluid className="card" href={project.html_url} target="blank">
+            <Image src={project.image} wrapped ui={false} />
+            <Card.Content>
+              <Card.Header>{project.name}</Card.Header>
+              <Card.Meta>{formateDate(project.created_at)}</Card.Meta>
+              <Card.Description>{project.description}</Card.Description>
+            </Card.Content>
+            {project.readme && (
+              <Card.Content extra>
+                <p>{project.readme}</p>
+              </Card.Content>
+            )}
+          </Card>
         ))}
       </div>
     </div>
   );
 };
+
+
 
 export default Projects;
