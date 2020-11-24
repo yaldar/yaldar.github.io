@@ -10,7 +10,6 @@ import './SkillList.css';
 const SkillList = ({ title, list }: SkillListType) => {
   const normalize = (name: string) => {
     const t = name.replace(/[-./]/g, '');
-    console.log(t);
     return t;
   };
   return (
