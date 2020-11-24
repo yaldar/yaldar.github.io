@@ -61,3 +61,7 @@
     text-align: left;
   }
 }
+
+.send{
+  float: right;
+}

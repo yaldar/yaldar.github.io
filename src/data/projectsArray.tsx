@@ -2,6 +2,7 @@ import { ProjectObject } from '../types';
 
 import chatApp from '../assets/chatApp.png';
 import spotify from '../assets/spotify.png';
+import snake from '../assets/snake.png';
 // TODO add forked repos
 // import corona from '../assets/corona.png';
 import weMentor from '../assets/weMentor.png';
@@ -29,7 +30,7 @@ const projectsArray: ProjectObject[] = [
 
     readme: '',
     name: 'functional-snake',
-    image: '',
+    image: snake,
   },
 
   {
