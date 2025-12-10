@@ -3,13 +3,13 @@ import projectsArray from '../../data/projectsArray';
 import './Projects.css';
 import Project from '../../components/Project/Project';
 
-import Timeline from '@material-ui/lab/Timeline';
+import { Timeline } from '@mui/lab';
 
 const Projects = () => {
   return (
     <div className="projects-wrapper" id="projects">
        <h2>My projects:</h2>
-      <Timeline align="alternate" className="projects-list">
+      <Timeline className="projects-list" position="alternate">
         {projectsArray.map((project) => (
           <Project project={project} />
         ))}
