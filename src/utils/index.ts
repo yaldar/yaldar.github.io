@@ -1,4 +1,4 @@
-import { ProjectObject } from '../types/index';
+// import { ProjectObject } from '../types/index';
 
 let prevScrollpos = window.pageYOffset;
 const scrollHandler = () => {

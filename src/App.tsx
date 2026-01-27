@@ -6,6 +6,7 @@ import Footer from './pages/Footer/Footer';
 import Skills from './pages/Skills/Skills';
 import Projects from './pages/Projects/Projects';
 import Experience from './pages/Experience/Experience';
+import Contact from './pages/Contact/Contact';
 import 'semantic-ui-css/semantic.min.css';
 
 const App = () => (
@@ -16,6 +17,7 @@ const App = () => (
       <Experience />
       <Skills />
       <Projects />
+      <Contact />
       <Footer />
     </div>
   </BrowserRouter>
