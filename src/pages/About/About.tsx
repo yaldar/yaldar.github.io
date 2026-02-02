@@ -26,7 +26,7 @@ const About = () => (
         <Icon name="github" size="huge" />
       </a>
 
-      <a href="https://www.linkedin.com/in/yaldar-hapak/" target="blank">
+      <a href="https://www.linkedin.com/in/yaldar/" target="blank">
         <Icon name="linkedin" size="huge" />
       </a>
       <a href="mailto:yaldar.hapak@gmail.com" target="blank">
