@@ -1,10 +1,15 @@
 import React from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 
-const Header = () => {
+interface HeaderProps {
+  themeMode: 'light' | 'dark';
+  onToggleTheme: () => void;
+}
+
+const Header = ({ themeMode, onToggleTheme }: HeaderProps) => {
   return (
     <header className="header">
-      <Navbar />
+      <Navbar themeMode={themeMode} onToggleTheme={onToggleTheme} />
     </header>
   );
 };

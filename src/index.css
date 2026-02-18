@@ -1,3 +1,39 @@
+:root {
+  color-scheme: light;
+  --bg-color: #f8fafc;
+  --text-color: #111827;
+  --muted-border: #d1d5db;
+  --surface: #ffffff;
+  --surface-alt: #f1f5f9;
+  --navbar-bg: antiquewhite;
+  --navbar-active: rgba(248, 195, 195, 0.664);
+  --navbar-hover: rgba(255, 155, 155, 0.466);
+  --input-bg: #ffffff;
+  --focus-color: #2185d0;
+  --switch-track: #dbe4ef;
+  --switch-track-active: #4f9cf6;
+  --switch-thumb: #ffffff;
+  --switch-thumb-active: #ffffff;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg-color: #0f1117;
+  --text-color: #f3f4f6;
+  --muted-border: #374151;
+  --surface: #1a1f2b;
+  --surface-alt: #232b39;
+  --navbar-bg: #151b26;
+  --navbar-active: #2a3345;
+  --navbar-hover: #323d53;
+  --input-bg: #151b26;
+  --focus-color: #7dd3fc;
+  --switch-track: #4b5563;
+  --switch-track-active: #7dd3fc;
+  --switch-thumb: #f9fafb;
+  --switch-thumb-active: #0f172a;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,4 +42,124 @@
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+#root,
+.App {
+  min-height: 100vh;
+  background-color: var(--bg-color) !important;
+  color: var(--text-color);
+}
+
+.about,
+.exp-wrapper,
+.centered-wrapper,
+.projects-wrapper,
+.contact,
+.footer {
+  background-color: transparent;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+span,
+label {
+  color: inherit;
+}
+
+.ui.card,
+.ui.cards > .card {
+  background-color: var(--surface) !important;
+  color: var(--text-color) !important;
+}
+
+.ui.card > .content,
+.ui.cards > .card > .content {
+  border-color: var(--muted-border) !important;
+}
+
+.ui.card .header,
+.ui.cards > .card .header,
+.ui.card .meta,
+.ui.cards > .card .meta,
+.ui.card .description,
+.ui.cards > .card .description,
+.ui.header {
+  color: var(--text-color) !important;
+}
+
+.ui.segment,
+.ui.segments .segment,
+.ui.list > .item .header,
+.ui.list > .item .description,
+.ui.list .list > .item .header,
+.ui.list .list > .item .description,
+.ui.label {
+  background-color: var(--surface) !important;
+  color: var(--text-color) !important;
+  border-color: var(--muted-border) !important;
+}
+
+.ui.form .field > label {
+  color: var(--text-color) !important;
+}
+
+.ui.form input:not([type]),
+.ui.form input[type='date'],
+.ui.form input[type='datetime-local'],
+.ui.form input[type='email'],
+.ui.form input[type='number'],
+.ui.form input[type='password'],
+.ui.form input[type='search'],
+.ui.form input[type='tel'],
+.ui.form input[type='text'],
+.ui.form input[type='time'],
+.ui.form input[type='url'],
+.ui.form textarea {
+  background-color: var(--input-bg) !important;
+  color: var(--text-color) !important;
+  border-color: var(--muted-border) !important;
+}
+
+.ui.form input:focus,
+.ui.form textarea:focus {
+  border-color: var(--focus-color) !important;
+}
+
+.ui.message {
+  background-color: var(--surface-alt) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--muted-border) !important;
+}
+
+.ui.message .header {
+  color: var(--text-color) !important;
+}
+
+.MuiTimelineDot-root {
+  background-color: var(--surface-alt) !important;
+  border-color: var(--muted-border) !important;
+}
+
+.MuiTimelineConnector-root {
+  background-color: var(--muted-border) !important;
 }

@@ -3,7 +3,12 @@ import { Icon } from 'semantic-ui-react';
 import NavbarLink from '../NavbarLink/NavbarLink';
 import './Navbar.css';
 
-const Navbar = () => {
+interface NavbarProps {
+  themeMode: 'light' | 'dark';
+  onToggleTheme: () => void;
+}
+
+const Navbar = ({ themeMode, onToggleTheme }: NavbarProps) => {
   const [expanded, setExpanded] = useState(false);
   const toggleExpanded = () => setExpanded((prev) => !prev);
   const r = useRef<Icon>(null);
@@ -30,6 +35,16 @@ const Navbar = () => {
       <NavbarLink to="Experience" />
       <NavbarLink to="Skills" />
       <NavbarLink to="Projects" />
+      <label className="theme-switch" htmlFor="theme-switch" aria-label="Toggle dark mode">
+        <input
+          id="theme-switch"
+          type="checkbox"
+          className="theme-switch-input"
+          checked={themeMode === 'dark'}
+          onChange={onToggleTheme}
+        />
+        <span className="theme-switch-slider" aria-hidden="true" />
+      </label>
     </nav>
   );
 };

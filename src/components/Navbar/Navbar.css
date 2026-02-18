@@ -1,16 +1,17 @@
 /* Add a black background color to the top navigation */
 .navbar {
-  background-color: antiquewhite;
+  background-color: var(--navbar-bg);
   position: fixed;
   top: 0;
   width: 100%;
   display: block;
   transition: top 0.3s;
   z-index: 6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .navbar > .active {
-  background-color: rgba(248, 195, 195, 0.664);
+  background-color: var(--navbar-active);
 }
 
 /* Style the links inside the navigation bar */
@@ -21,14 +22,14 @@
   padding: 10px 16px;
   text-decoration: none;
   font-size: 17px;
-  color: black;
+  color: var(--text-color);
 }
 
 /* Change the color of links on hover */
 .navbar a:hover {
-  background-color: rgba(255, 155, 155, 0.466);
+  background-color: var(--navbar-hover);
 
-  color: black;
+  color: var(--text-color);
 }
 
 /* Add an active class to highlight the current page */
@@ -40,6 +41,63 @@
 /* Hide the link that should open and close the navbar on small screens */
 .navbar .icon {
   display: none;
+  color: var(--text-color);
+}
+
+.theme-switch {
+  float: right;
+  position: relative;
+  width: 54px;
+  height: 30px;
+  margin: 5px 14px;
+  cursor: pointer;
+}
+
+.theme-switch-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.theme-switch-slider {
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--muted-border);
+  border-radius: 999px;
+  background-color: var(--switch-track);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-switch-slider::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--switch-thumb);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.theme-switch-input:checked + .theme-switch-slider {
+  background-color: var(--switch-track-active);
+}
+
+.theme-switch-input:checked + .theme-switch-slider::before {
+  transform: translateX(24px);
+  background-color: var(--switch-thumb-active);
+}
+
+.theme-switch-input:focus-visible + .theme-switch-slider {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+.theme-switch:hover .theme-switch-slider {
+  border-color: var(--focus-color);
 }
 
 @media screen and (max-width: 600px) {
@@ -60,8 +118,13 @@
     display: block;
     text-align: left;
   }
+  .theme-switch {
+    float: none;
+    margin: 5px 16px;
+    display: block;
+  }
 }
 
-.send{
+.send {
   float: right;
 }
