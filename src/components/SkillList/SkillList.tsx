@@ -1,13 +1,13 @@
 /* eslint-disable react/no-array-index-key */
 // @ts-nocheck
 import React from 'react';
-import {Icon} from 'semantic-ui-react';
-import {SkillListType} from '../../types';
-import {iconsArray} from '../../data/skillsData';
+import { Icon } from 'semantic-ui-react';
+import { SkillListType } from '../../types';
+import { iconsArray } from '../../data/skillsData';
 import './SkillList.css';
 
 // TODO fix ugly code plz look away
-const SkillList = ({title, list}: SkillListType) => {
+const SkillList = ({ title, list }: SkillListType) => {
     const normalize = (name: string) => {
         return name.replace(/[-./]/g, '');
     };
@@ -16,11 +16,11 @@ const SkillList = ({title, list}: SkillListType) => {
             <h3>{title}</h3>
             {list.map((el, i) => {
                 return (
-                    <div className="skill">
+                    <div className="skill" key={i}>
                         {el.semanticIcon ? (
-                            <Icon name={el.semanticIcon}/>
+                            <Icon name={el.semanticIcon} />
                         ) : (
-                            <img src={iconsArray[normalize(el.name)]} className="icon" alt={el.semanticIcon}/>
+                            <img src={iconsArray[normalize(el.name)]} className="icon" alt={el.semanticIcon} />
                         )}
 
                         <li key={i}>{el.name}</li>

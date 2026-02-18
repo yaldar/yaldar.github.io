@@ -8,10 +8,10 @@ import { Timeline } from '@mui/lab';
 const Projects = () => {
   return (
     <div className="projects-wrapper" id="projects">
-       <h2>My projects:</h2>
+      <h2>My projects:</h2>
       <Timeline className="projects-list" position="alternate">
-        {projectsArray.map((project) => (
-          <Project project={project} />
+        {projectsArray.map((project, i) => (
+          <Project project={project} key={i} />
         ))}
       </Timeline>
     </div>
